@@ -1,45 +1,39 @@
+#palindrome checker
+#a word that is the same forewards as backwards
+
+#enter a word
+#to get the word backwards
+#check the inputted is the same as the backwards version
 
 
-# for i in range (10):
-#   number=int(input("Enter a number: "))
-#   if number > 70:
-#     number = str(number)
-#     number = number + "\n"
-#     f=open("textfile.txt","a")
-#     f.write(number)
-#     f.close()
+   
 
-# f=open("textfile.txt","r")
-# print(f.read())
-# f.close()
+def hard():
+  word = input("Enter a word:")
+  forwardWord = list(word)
+  
+  #go through list backwards (length-1, to the first element, backwards)
+  backwardsWord = []
+  for i in range (len(forwardWord)-1, -1,-1):
+    backwardsWord.append(forwardWord[i])
+  
+  if forwardWord == backwardsWord:
+    print("this is a palindrome")
+  else:
+      print("this is not a palindrome")
 
-# import random
-# for i in range(30):
-#   number = random.randint(0,150)
-#   number = str(number)
-#   number = number + "\n"
-#   f=open("textfile.txt","a")
-#   f.write(number)
-#   f.close()
+  
+def easy():
+  forwardsWord= input("Enter a word:")
+  #[::1] is forewards, [::-1] backwards
+  backwardsWord = forwardsWord[::-1]
+  
+  # print(forwardsWord)
+  # print(backwardsWord)
+  
+  if forwardsWord == backwardsWord:
+    print("this is a palindrome")
+  else:
+      print("this is not a palindrome")
 
-# f = open("textfile.txt", "r")
-# for line in f:
-#   number = int(line)
-#   if number > 70:
-#     print(number)
-
-
-#use Time for speeds
-
-    
-from time import time, ctime
-import time
-start = time.time()
-time.sleep(3)
-end  = time.time()
-finaltime = end-start
-print(finaltime)
-
-t= time()
-ctime(t)
-
+easy()
