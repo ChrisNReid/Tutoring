@@ -28,3 +28,21 @@ def pigLatin():
   print(array)
   print(" ".join(array))
 
+def countVowels():
+  #Count Vowels in a text
+  sentence1=input("Write your sentence:")
+  array = ["a","e","i","o","u"]
+  count1 = 0
+  for i in range(len(sentence1)):
+    if sentence1[i] in array:
+      count1 = count1 + 1
+  print(count1)
+
+#Unit Converter
+beginUnit = input("enter the unit being converted (celcius/..)")
+beginValue = int(input("enter beginning value: "))
+endUnit = input("enter the final unit (fahrenheit/..)")
+
+if beginUnit == "celcius" and endUnit == "fahrenheit":
+  endValue = (beginValue * 1.8) + 32
+  print(endValue)
