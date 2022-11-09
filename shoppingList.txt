@@ -1,0 +1,8 @@
+Shopping List
+.
+
+Grapes - Tesco - 1
+Apples - Tesco - 5
+Tomato - Waitrose - 2
+Banana - Tesco - 3
+Strawberry - Aldi - 4
