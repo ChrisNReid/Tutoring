@@ -1,19 +1,33 @@
-# Years in a Range
-# Write a program to count the number years in a range that has a repeated digit.
-# For example, 2012 has a repeated digit, but 2013 does not
+# Create a program that takes two strings/words. Then then converts this to an ASCII value and subtracts the values from each other.
+# Extension:
+# 1. Also add a function that removes any characters in the second word that occur in the first word. E.g. Fish and Tin, would return “Fsh” and “T
 
-year = input("Enter a year :")
-repeated = False
+word1=input("Enter a word :")
+word2=input("Enter another word:")
+word1arr = []
+word2arr = []
+finalarr = []
+diffarr = []
+# find the ascii numbers of each letter for word 1 
+# put in array
+for i in range(0,len(word1)):
+  word1arr.append(ord(word1[i]))
+print(word1arr)
 
-# array = list(year)
-# print(array)
+# find the ascii numbers of each letter for word 2
+# put in array
+for i in range(0,len(word2)):
+  word2arr.append(ord(word2[i]))
+print(word2arr)
 
-for i in range (4):
-   if year.count(year[i]) > 1:
-     repeated = True
+# subtract each ascii value from the second words ascii value to give a new integer
+# print this letter
+for i in range(0,len(word1)):
+    diff = abs(word1arr[i] + word2arr[i])
+    finalarr.append(diff)
 
-if repeated == True:
-  print(year, " has a repeated digit")
-else:
-    print(year, " has no repeated digits")
-
+print(finalarr)
+for i in range(len(finalarr)):
+  letter = chr(finalarr[i])
+  diffarr.append(letter)
+print(diffarr)
