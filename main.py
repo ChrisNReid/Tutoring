@@ -1,33 +1,25 @@
-# Create a program that takes two strings/words. Then then converts this to an ASCII value and subtracts the values from each other.
-# Extension:
-# 1. Also add a function that removes any characters in the second word that occur in the first word. E.g. Fish and Tin, would return “Fsh” and “T
+#Theif
+#write a program that displays all possible combination of 4 digits
+number1=input("Enter a number :")
+number2=input("Enter a second number :")
+number3=input("Enter a third number :")
+number4=input("Enter a fourth number :")
 
-word1=input("Enter a word :")
-word2=input("Enter another word:")
-word1arr = []
-word2arr = []
-finalarr = []
-diffarr = []
-# find the ascii numbers of each letter for word 1 
-# put in array
-for i in range(0,len(word1)):
-  word1arr.append(ord(word1[i]))
-print(word1arr)
+array=[]
+array.append(number1)
+array.append(number2)
+array.append(number3)
 
-# find the ascii numbers of each letter for word 2
-# put in array
-for i in range(0,len(word2)):
-  word2arr.append(ord(word2[i]))
-print(word2arr)
+#array = [1,2,3,4]
 
-# subtract each ascii value from the second words ascii value to give a new integer
-# print this letter
-for i in range(0,len(word1)):
-    diff = abs(word1arr[i] + word2arr[i])
-    finalarr.append(diff)
+for i in range(len(array)):
+  for j in range(len(array)):
+    for k in range(len(array)):
+        if (array[i] == array[j])  and (array[j]==array[k]) and (array[i]==array[k]):
+          x=4
+        else:
+          print(array[i], array[j], array[k])
 
-print(finalarr)
-for i in range(len(finalarr)):
-  letter = chr(finalarr[i])
-  diffarr.append(letter)
-print(diffarr)
+
+#scale up
+#make it a function that accepts a list
